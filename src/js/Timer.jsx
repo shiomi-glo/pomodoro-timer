@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import { SingleEntryPlugin } from 'webpack';
 
 const Timer = () => {
   const [second, setSecond] = useState(0);
