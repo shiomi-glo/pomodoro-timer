@@ -6,8 +6,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>テスト成功</h1>
-        <Timer />
+        <h1>ポモドーロタイマー</h1>
+          <Timer />
       </div>
     );
   }
