@@ -16,6 +16,22 @@ module.exports = {
     port: 4649,
     contentBase: path.resolve(__dirname, 'public'),
   },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              '@babel/preset-env',
+              '@babel/react'
+            ]
+          }
+        }
+      }
+    ]
+  },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
