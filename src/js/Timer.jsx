@@ -5,7 +5,9 @@ const Timer = () => {
   const [isActive, changeActive] = useState(false)
   const tick = () => {
     if(isActive){
-      setSecond(second - 1);
+      if(second > 0){
+        setSecond(second - 1);
+      }
       if(second == 0){
         timeOver();
       }
