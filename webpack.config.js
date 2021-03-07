@@ -3,12 +3,19 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/js/app.js',
+  mode: 'development',
+  entry: './src/js/index.jsx',
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'js/bundle.js',
   },
-  mode: 'development',
+  resolve: {
+    extensions: [".js", ".jsx"],
+    modules: [
+      path.resolve('src/js'),
+      "node_modules"
+    ]
+  },
   watch: true,
   devtool: 'cheap-module-eval-source-map',
   devServer: {
